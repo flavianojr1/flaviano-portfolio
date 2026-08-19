@@ -1,15 +1,314 @@
 export type Locale = 'pt' | 'en';
+
 export const portfolio = {
-  name: 'Flaviano Astolfo Junior', role: { pt: 'Data Analytics · Automation · Business Intelligence', en: 'Data Analytics · Automation · Business Intelligence' },
-  nav: { pt: ['Início','Sobre','Projetos','Experiência','Contato'], en: ['Home','About','Projects','Experience','Contact'] },
-  hero: { pt: { eyebrow: 'Dados que orientam decisões.', title: 'Transformo dados complexos em clareza estratégica.', description: 'Construo soluções de dados com SQL Server, Python e Power BI para automatizar processos, gerar indicadores e apoiar decisões de negócio.', primary: 'Conheça meu trabalho', secondary: 'Vamos conversar' }, en: { eyebrow: 'Data that drives decisions.', title: 'I turn complex data into strategic clarity.', description: 'I build data solutions with SQL Server, Python, and Power BI to automate processes, generate insights, and support business decisions.', primary: 'Explore my work', secondary: "Let's talk" } },
-  about: { pt: { label: '01 / Sobre mim', title: 'Curiosidade com método.', text: 'Acredito que os melhores insights nascem da combinação entre curiosidade, rigor analítico e uma boa história. Meu trabalho conecta dados, pessoas e contexto para criar soluções que realmente movem o negócio.', facts: ['3+ anos analisando dados','20+ dashboards entregues','Foco em impacto mensurável'] }, en: { label: '01 / About me', title: 'Curiosity with method.', text: 'I believe the best insights combine curiosity, analytical rigor, and a good story. My work connects data, people, and context to create solutions that move the business forward.', facts: ['3+ years analyzing data','20+ dashboards delivered','Focus on measurable impact'] } },
-  skills: { pt: { label: '02 / Toolkit', title: 'Ferramentas para dar vida aos dados.' }, en: { label: '02 / Toolkit', title: 'Tools to bring data to life.' } },
-  projects: { pt: { label: '03 / Estudos de caso', title: 'Trabalho que fala por si.', intro: 'Uma seleção de projetos fictícios que mostram como abordo problemas reais de negócio.' }, en: { label: '03 / Case studies', title: 'Work that speaks for itself.', intro: 'A selection of fictional projects showing how I approach real business problems.' } },
-  experience: { pt: { label: '04 / Experiência', title: 'Uma trajetória orientada por perguntas.' }, en: { label: '04 / Experience', title: 'A journey guided by questions.' } },
-  contact: { pt: { label: '05 / Contato', title: 'Tem um desafio interessante?', text: 'Estou sempre aberto a conversar sobre dados, produtos e novas possibilidades. Minha caixa de entrada está aberta.', cta: 'Enviar mensagem' }, en: { label: '05 / Contact', title: 'Have an interesting challenge?', text: "I'm always open to talk about data, products, and new possibilities. My inbox is open.", cta: 'Send a message' } },
-  skillsData: [{name:'Python', type:'Linguagem', icon:'⌘'}, {name:'SQL', type:'Dados', icon:'⌁'}, {name:'Power BI', type:'Visualização', icon:'◈'}, {name:'Excel', type:'Análise', icon:'▦'}, {name:'Pandas', type:'Ecossistema Python', icon:'◫'}, {name:'Storytelling', type:'Competência', icon:'✦'}],
-  projectsData: [{ title:'Sales Pulse', category:'BI / Visualização', problem:{pt:'Lideranças precisavam de uma visão única sobre a performance comercial.',en:'Leaders needed a single view of commercial performance.'}, solution:{pt:'Dashboard executivo com indicadores, filtros por região e leitura de tendências.',en:'Executive dashboard with KPIs, regional filters, and trend reading.'}, tech:['Power BI','SQL','DAX'], result:{pt:'-32% no tempo das reuniões semanais',en:'-32% in weekly meeting time'}, image:'/projects/sales-pulse.svg'}, {title:'Ops Flow',category:'Engenharia / Dados',problem:{pt:'Relatórios operacionais manuais consumiam horas da equipe.',en:'Manual operational reports consumed hours of the team.'},solution:{pt:'Pipeline automatizado para consolidar dados de múltiplas fontes.',en:'Automated pipeline consolidating data from multiple sources.'},tech:['Python','PostgreSQL','Airflow'],result:{pt:'+18h recuperadas por mês',en:'+18h recovered per month'},image:'/projects/ops-flow.svg'}, {title:'Retention Lens',category:'Produto / Estratégia',problem:{pt:'O time não conseguia identificar os sinais de churn com antecedência.',en:'The team could not identify churn signals early enough.'},solution:{pt:'Segmentação de clientes e modelo exploratório de retenção.',en:'Customer segmentation and exploratory retention model.'},tech:['Python','Pandas','Jupyter'],result:{pt:'+14% na retenção do segmento-chave',en:'+14% retention in key segment'},image:'/projects/retention-lens.svg'}],
-  experienceData: [{period:'2023 — agora',role:{pt:'Analista de Dados · NovaLab',en:'Data Analyst · NovaLab'},text:{pt:'Construção de dashboards, automação de rotinas e parceria com times de produto.',en:'Dashboard building, routine automation, and partnership with product teams.'}},{period:'2021 — 2023',role:{pt:'Analista de BI · Orbit Tech',en:'BI Analyst · Orbit Tech'},text:{pt:'Análises comerciais e definição de métricas para apoiar decisões de crescimento.',en:'Commercial analysis and metric definition supporting growth decisions.'}},{period:'2019 — 2021',role:{pt:'Assistente de Dados · Atlas',en:'Data Assistant · Atlas'},text:{pt:'Organização de bases, qualidade de dados e primeiros projetos de visualização.',en:'Data organization, data quality, and first visualization projects.'}}],
-  links:{github:'https://github.com/',linkedin:'https://www.linkedin.com/',email:'mailto:hello@example.com'}
+  name: 'Flaviano Astolfo Junior',
+  role: {
+    pt: 'Data Analytics · Business Intelligence · Automation',
+    en: 'Data Analytics · Business Intelligence · Automation',
+  },
+  location: 'São Paulo, SP - Brasil',
+  nav: {
+    pt: ['Início', 'Sobre', 'Habilidades', 'Projetos', 'Experiência', 'Formação', 'Contato'],
+    en: ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Education', 'Contact'],
+  },
+  hero: {
+    pt: {
+      eyebrow: 'Dados · Automação · Business Intelligence',
+      title: 'Transformo dados complexos em clareza estratégica e decisões de alto impacto.',
+      description:
+        'Construo soluções de dados com SQL Server, Power BI, DAX e Python para estruturar pipelines, automatizar rotinas operacionais e desenvolver dashboards executivos para apoio à tomada de decisão.',
+      primary: 'Conheça meu trabalho',
+      secondary: 'Vamos conversar',
+    },
+    en: {
+      eyebrow: 'Data · Automation · Business Intelligence',
+      title: 'Transforming complex data into strategic clarity and high-impact decisions.',
+      description:
+        'I build data solutions with SQL Server, Power BI, DAX, and Python to structure pipelines, automate operational routines, and deliver executive dashboards that empower decision-making.',
+      primary: 'Explore my work',
+      secondary: "Let's talk",
+    },
+  },
+  about: {
+    pt: {
+      label: '01 / Sobre mim',
+      title: 'Rigor analítico, visão de negócio e eficiência operacional.',
+      text: 'Acredito que os melhores insights nascem da combinação entre curiosidade, rigor analítico e compreensão das necessidades do negócio. Com formação em Gestão Financeira e Ciência de Dados (EBAC), atuo na construção de pipelines de dados, conferências operacionais para bases volumosas (+2M linhas) e modelagem de dashboards em Power BI. Minha abordagem une a otimização de consultas em SQL Server, a automação de rotinas em Python e o storytelling para eliminar retrabalho e apoiar decisões estratégicas.',
+      facts: [
+        'Bases com +2M de linhas analisadas',
+        'Otimização de queries: dias → horas',
+        'Inglês Avançado (B2-C1)',
+      ],
+    },
+    en: {
+      label: '01 / About me',
+      title: 'Analytical rigor, business vision, and operational efficiency.',
+      text: 'I believe the best insights come from combining curiosity, analytical rigor, and a deep understanding of business needs. With a background in Financial Management and Data Science (EBAC), I develop data pipelines, large-scale operational reconciliations (2M+ records), and Power BI dashboards. My approach combines SQL Server query optimization, Python automation, and data storytelling to eliminate rework and empower strategic decisions.',
+      facts: [
+        '2M+ record datasets analyzed',
+        'Query optimization: days → hours',
+        'Advanced English (B2-C1)',
+      ],
+    },
+  },
+  skills: {
+    pt: {
+      label: '02 / Competências',
+      title: 'Stack técnica para o ciclo completo de dados.',
+    },
+    en: {
+      label: '02 / Toolkit',
+      title: 'Technical stack for the end-to-end data lifecycle.',
+    },
+  },
+  skillsData: [
+    {
+      name: 'SQL Server & T-SQL',
+      type: {
+        pt: 'Consultas complexas, Temp Tables, Índices, Otimização de Queries',
+        en: 'Complex queries, Temp Tables, Indexes, Query Optimization',
+      },
+      icon: '⌁',
+    },
+    {
+      name: 'Power BI & DAX',
+      type: {
+        pt: 'Modelagem Star Schema, Power Query, Indicadores e Dashboards Executivos',
+        en: 'Star Schema, Power Query, Executive KPIs & Dashboards',
+      },
+      icon: '◈',
+    },
+    {
+      name: 'Python & Automação',
+      type: {
+        pt: 'Pandas, NumPy, pyodbc, ETL, automação de rotinas e integração de APIs',
+        en: 'Pandas, NumPy, pyodbc, ETL, routine automation & API integration',
+      },
+      icon: '⌘',
+    },
+    {
+      name: 'Qualidade de Dados & Auditoria',
+      type: {
+        pt: 'Data Quality, reconciliação de divergências, validação de regras de negócio',
+        en: 'Data Quality, discrepancy reconciliation, business rule validation',
+      },
+      icon: '✦',
+    },
+    {
+      name: 'Excel Avançado & VBA',
+      type: {
+        pt: 'Modelagem de dados, fórmulas avançadas e automação de controles',
+        en: 'Data modeling, advanced formulas & control automation',
+      },
+      icon: '▦',
+    },
+    {
+      name: 'Ferramentas Modernas & IA',
+      type: {
+        pt: 'Git, GitHub, Model Context Protocol (MCP), Cursor AI e documentação técnica',
+        en: 'Git, GitHub, Model Context Protocol (MCP), Cursor AI & Tech Docs',
+      },
+      icon: '⚙',
+    },
+  ],
+  projects: {
+    pt: {
+      label: '03 / Estudos de caso',
+      title: 'Projetos e soluções em destaque.',
+      intro: 'Projetos mockados estruturados para demonstrar arquitetura, pipelines de dados e visualização analítica (novos projetos reais serão adicionados em breve).',
+    },
+    en: {
+      label: '03 / Case studies',
+      title: 'Featured projects and solutions.',
+      intro: 'Mocked projects structured to demonstrate architecture, data pipelines, and analytical visualization (new real projects will be added soon).',
+    },
+  },
+  projectsData: [
+    {
+      title: 'Hub Financeiro',
+      category: 'Portal Analítico · Automação',
+      problem: {
+        pt: 'Dificuldade na consolidação manual de múltiplos extratos e faturas em formatos variados (CSV e PDF).',
+        en: 'Difficulty in manual consolidation of multiple bank statements and invoices in varied formats (CSV & PDF).',
+      },
+      solution: {
+        pt: 'Portal modular com importação automatizada, deduplicação de transações, regras de categorização e dashboards analíticos de gastos.',
+        en: 'Modular portal with automated ingestion, transaction deduplication, categorization rules, and spending analytics dashboards.',
+      },
+      tech: ['Python', 'SQLite', 'Pandas', 'Dashboards'],
+      result: {
+        pt: 'Processamento automatizado de faturas em segundos',
+        en: 'Automated invoice processing in seconds',
+      },
+      image: '/projects/sales-pulse.svg',
+    },
+    {
+      title: 'Pipeline de Dados & BI',
+      category: 'SQL Server · Business Intelligence',
+      problem: {
+        pt: 'Processamentos críticos de fechamento operacional demoravam dias e divergências dependiam de conferências manuais.',
+        en: 'Critical operational closing processing took days and discrepancies relied on manual spreadsheet checks.',
+      },
+      solution: {
+        pt: 'Otimização com tabelas temporárias, índices e criação de dashboard executivo com indicadores gerenciais e comparativos.',
+        en: 'Query optimization with temp tables, indexes, and an executive dashboard with management KPIs and comparisons.',
+      },
+      tech: ['SQL Server', 'T-SQL', 'Power BI', 'DAX'],
+      result: {
+        pt: 'Processamentos reduzidos de dias para horas (+2M linhas)',
+        en: 'Processing reduced from days to hours (2M+ records)',
+      },
+      image: '/projects/ops-flow.svg',
+    },
+    {
+      title: 'Detecção de Fraudes em Cartão',
+      category: 'Machine Learning · Data Science',
+      problem: {
+        pt: 'Identificação de transações fraudulentas em base com 284 mil registros e altíssimo desbalanceamento entre classes.',
+        en: 'Identifying fraudulent transactions in a 284k transaction dataset with extreme class imbalance.',
+      },
+      solution: {
+        pt: 'EDA completa, tratamento de dados desbalanceados (SMOTE), calibração de threshold e foco na maximização do Recall e PR AUC.',
+        en: 'Complete EDA, imbalanced data handling (SMOTE), threshold calibration, focusing on Recall and PR AUC maximization.',
+      },
+      tech: ['Python', 'Scikit-Learn', 'EDA', 'Model Evaluation'],
+      result: {
+        pt: 'Minimização drástica de falsos negativos operacionais',
+        en: 'Drastic minimization of operational false negatives',
+      },
+      image: '/projects/retention-lens.svg',
+    },
+  ],
+  experience: {
+    pt: {
+      label: '04 / Experiência',
+      title: 'Trajetória profissional orientada a resultados.',
+    },
+    en: {
+      label: '04 / Experience',
+      title: 'Professional track record driven by results.',
+    },
+  },
+  experienceData: [
+    {
+      period: 'Dez/2025 — Atual',
+      company: 'Banco Daycoval',
+      location: 'São Paulo, SP',
+      role: {
+        pt: 'Analista de Dados Júnior',
+        en: 'Junior Data Analyst',
+      },
+      highlights: {
+        pt: [
+          'Desenvolvimento, tratamento e validação de bases de dados volumosas para rotinas de fechamento e conferências operacionais.',
+          'Criação de pipelines em SQL Server e Python para consolidação, padronização e enriquecimento de dados de múltiplos produtos.',
+          'Otimização de rotinas e queries críticas em SQL Server, reduzindo processamentos que levavam dias para poucas horas.',
+          'Construção de ferramentas de conferência para bases com mais de 2 milhões de linhas, identificando divergências e inconsistências.',
+          'Desenvolvimento e reestruturação de dashboards em Power BI com DAX avançado e modelagem para apoio à tomada de decisão gerencial.',
+        ],
+        en: [
+          'Development, cleaning, and validation of large-scale datasets for closing routines and operational audits.',
+          'Creation of SQL Server and Python pipelines for data consolidation, standardization, and enrichment across multiple products.',
+          'Optimization of critical SQL Server queries and routines, reducing processing times from days to hours.',
+          'Built reconciliation tools for 2M+ record databases, detecting operational inconsistencies.',
+          'Development and refactoring of executive Power BI dashboards with advanced DAX and data modeling for management decision-making.',
+        ],
+      },
+    },
+    {
+      period: 'Ago/2021 — Nov/2025',
+      company: 'TGA – Tobi Automotive Garage',
+      location: 'São José do Rio Pardo, SP',
+      role: {
+        pt: 'Administrador / Analista',
+        en: 'Administrator / Business Analyst',
+      },
+      highlights: {
+        pt: [
+          'Análise de dados comerciais, financeiros e operacionais para suporte à precificação, gestão de custos e planejamento de vendas.',
+          'Desenvolvimento de controles, dashboards e indicadores em Excel e Power BI, contribuindo para crescimento de 30% no faturamento.',
+        ],
+        en: [
+          'Analysis of commercial, financial, and operational data supporting pricing, cost management, and sales planning.',
+          'Development of Excel and Power BI dashboards and KPIs, contributing to a 30% revenue growth.',
+        ],
+      },
+    },
+    {
+      period: 'Jan/2015 — Nov/2015',
+      company: 'Mediappeal (Marketing Digital)',
+      location: 'São José do Rio Pardo, SP',
+      role: {
+        pt: 'Desenvolvedor Web',
+        en: 'Web Developer',
+      },
+      highlights: {
+        pt: [
+          'Desenvolvimento e manutenção de aplicações web institucionais em PHP, MySQL, HTML, CSS e WordPress.',
+        ],
+        en: [
+          'Development and maintenance of institutional web applications in PHP, MySQL, HTML, CSS, and WordPress.',
+        ],
+      },
+    },
+  ],
+  education: {
+    pt: {
+      label: '05 / Formação & Certificações',
+      title: 'Base acadêmica sólida e aprendizado contínuo.',
+    },
+    en: {
+      label: '05 / Education & Certifications',
+      title: 'Solid academic foundation and continuous learning.',
+    },
+  },
+  educationData: [
+    {
+      institution: 'EBAC – Escola Britânica de Artes Criativas e Tecnologia',
+      course: {
+        pt: 'Curso Profissionalizante em Ciência de Dados',
+        en: 'Professional Program in Data Science',
+      },
+      period: '2025 — 2026',
+      status: { pt: 'Concluído', en: 'Completed' },
+    },
+    {
+      institution: 'Estácio',
+      course: {
+        pt: 'Curso Superior de Tecnologia (CST) em Gestão Financeira',
+        en: "Associate Degree in Financial Management",
+      },
+      period: '2021 — 2022',
+      status: { pt: 'Graduado', en: 'Graduated' },
+    },
+    {
+      institution: 'ETEC',
+      course: {
+        pt: 'Técnico Integrado ao Ensino Médio em Informática/Software',
+        en: 'Technical High School in Computer Science/Software',
+      },
+      period: '2012 — 2014',
+      status: { pt: 'Concluído', en: 'Completed' },
+    },
+  ],
+  contact: {
+    pt: {
+      label: '06 / Contato',
+      title: 'Tem um desafio com dados ou oportunidade interessante?',
+      text: 'Estou disponível para novas conexões, projetos e oportunidades na área de dados, analytics e business intelligence. Minha caixa de entrada está sempre aberta.',
+      cta: 'Enviar E-mail Direto',
+    },
+    en: {
+      label: '06 / Contact',
+      title: 'Have a data challenge or an interesting opportunity?',
+      text: "I'm open to new connections, projects, and opportunities in data analytics and business intelligence. Feel free to reach out anytime.",
+      cta: 'Send Direct Email',
+    },
+  },
+  links: {
+    github: 'https://github.com/flavianojr1',
+    linkedin: 'https://www.linkedin.com/',
+    email: 'mailto:flavianoastolfojunior@gmail.com',
+    emailText: 'flavianoastolfojunior@gmail.com',
+  },
 } as const;
