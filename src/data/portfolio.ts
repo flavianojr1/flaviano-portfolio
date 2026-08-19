@@ -32,8 +32,23 @@ export const portfolio = {
   about: {
     pt: {
       label: '01 / Sobre mim',
-      title: 'Rigor analítico, visão de negócio e eficiência operacional.',
-      text: 'Acredito que os melhores insights nascem da combinação entre curiosidade, rigor analítico e compreensão das necessidades do negócio. Com formação em Gestão Financeira e Ciência de Dados (EBAC), atuo na construção de pipelines de dados, conferências operacionais para bases volumosas (+2M linhas) e modelagem de dashboards em Power BI. Minha abordagem une a otimização de consultas em SQL Server, a automação de rotinas em Python e o storytelling para eliminar retrabalho e apoiar decisões estratégicas.',
+      title: 'Conectando dados, processos e decisões.',
+      intro:
+        'Analista de Dados com formação em Gestão Financeira e Ciência de Dados (EBAC). Minha atuação combina rigor analítico e entendimento de negócio para transformar rotinas operacionais em fluxos automatizados e dados brutos em decisões estratégicas.',
+      topics: [
+        {
+          title: 'Engenharia de Dados & SQL',
+          desc: 'Construção de pipelines, validação de regras de negócio e otimização profunda de queries em SQL Server para bases volumosas (+2M linhas).',
+        },
+        {
+          title: 'Automação com Python',
+          desc: 'Desenvolvimento de scripts para ETL, integração de múltiplas fontes, tratamento de divergências e eliminação de tarefas manuais.',
+        },
+        {
+          title: 'Business Intelligence & DAX',
+          desc: 'Modelagem dimensional (Star Schema) e criação de dashboards gerenciais em Power BI com indicadores claros para líderes e gestores.',
+        },
+      ],
       facts: [
         'Bases com +2M de linhas analisadas',
         'Otimização de queries: dias → horas',
@@ -42,8 +57,23 @@ export const portfolio = {
     },
     en: {
       label: '01 / About me',
-      title: 'Analytical rigor, business vision, and operational efficiency.',
-      text: 'I believe the best insights come from combining curiosity, analytical rigor, and a deep understanding of business needs. With a background in Financial Management and Data Science (EBAC), I develop data pipelines, large-scale operational reconciliations (2M+ records), and Power BI dashboards. My approach combines SQL Server query optimization, Python automation, and data storytelling to eliminate rework and empower strategic decisions.',
+      title: 'Connecting data, processes, and decisions.',
+      intro:
+        'Data Analyst with a background in Financial Management and Data Science (EBAC). My work combines analytical rigor and business understanding to turn operational routines into automated workflows and raw data into strategic decisions.',
+      topics: [
+        {
+          title: 'Data Engineering & SQL',
+          desc: 'Building pipelines, business rule validation, and deep SQL Server query optimization for large datasets (2M+ records).',
+        },
+        {
+          title: 'Automation with Python',
+          desc: 'Developing scripts for ETL, multi-source integration, discrepancy resolution, and elimination of manual spreadsheets.',
+        },
+        {
+          title: 'Business Intelligence & DAX',
+          desc: 'Dimensional modeling (Star Schema) and executive Power BI dashboards with clear, actionable KPIs for decision-makers.',
+        },
+      ],
       facts: [
         '2M+ record datasets analyzed',
         'Query optimization: days → hours',

@@ -273,23 +273,44 @@ export default function Home() {
 
       {/* Sobre Section */}
       <Section id="sobre">
-        <div className="grid gap-12 md:grid-cols-[1fr_1.6fr]">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-14">
           <div>
             <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.about).label}</p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+            <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
               {t(p.about).title}
             </h2>
-          </div>
-          <div>
-            <p className="text-lg leading-8 text-slate-600 dark:text-slate-300">{t(p.about).text}</p>
-            <div className="mt-10 grid grid-cols-1 gap-4 border-t border-slate-200 pt-6 dark:border-white/10 sm:grid-cols-3">
+            <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
+              {t(p.about).intro}
+            </p>
+
+            <div className="mt-8 flex flex-col gap-2.5">
               {t(p.about).facts.map((x: string) => (
-                <div key={x} className="flex items-center gap-2 rounded-xl bg-slate-50 p-3 text-xs font-semibold text-slate-700 dark:bg-white/[.02] dark:text-slate-300">
-                  <CheckCircle2 size={16} className="shrink-0 text-sky-600 dark:text-cyan" />
+                <div
+                  key={x}
+                  className="flex items-center gap-2.5 rounded-xl border border-slate-200/80 bg-slate-50/80 px-3.5 py-2.5 text-xs font-semibold text-slate-700 dark:border-white/10 dark:bg-white/[.02] dark:text-slate-300"
+                >
+                  <CheckCircle2 size={15} className="shrink-0 text-sky-600 dark:text-cyan" />
                   <span>{x}</span>
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="flex flex-col justify-center gap-3.5">
+            {t(p.about).topics.map((item: any, idx: number) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-sky-500/30 hover:shadow-md dark:border-white/10 dark:bg-white/[.03] dark:hover:border-cyan/30"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sky-100 font-mono text-xs font-bold text-sky-700 dark:bg-cyan/10 dark:text-cyan">
+                    0{idx + 1}
+                  </span>
+                  <h3 className="font-mono text-sm font-bold text-slate-900 dark:text-white">{item.title}</h3>
+                </div>
+                <p className="mt-2 text-xs leading-5 text-slate-600 dark:text-slate-400 pl-9">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
