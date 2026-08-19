@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --muted: #64748b;
+  --line: rgba(148, 163, 184, 0.25);
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #07111f;
+  --panel: #0c1a2c;
+  --muted: #8da2b8;
+  --line: rgba(141, 162, 184, 0.18);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: #0f172a;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  color: #f4f8fb;
+}
+
+::selection {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.dark ::selection {
+  background: #5ee7f5;
+  color: #07111f;
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(2, 132, 199, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.dark .grid-bg {
+  background-image: linear-gradient(rgba(94, 231, 245, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94, 231, 245, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.text-gradient {
+  background: linear-gradient(110deg, #0f172a 20%, #0284c7 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.dark .text-gradient {
+  background: linear-gradient(110deg, #ffffff 20%, #5ee7f5 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Portrait treatment */
+div:has(> img[src="/images/profile-dark.jpg"]) {
+  aspect-ratio: 1;
+  border-radius: 9999px;
+}
+div:has(> div > img[src="/images/profile-dark.jpg"]) {
+  margin-top: -2rem;
+}
+div:has(> div > img[src="/images/profile-dark.jpg"]) > div:first-child {
+  border-radius: 9999px;
+}
+img[src="/images/profile-dark.jpg"] {
+  border-radius: 9999px;
+  object-position: center 70%;
+  transform: translateY(-18px) scale(1.12);
+  transform-origin: center center;
+}
+
+#inicio a[href="#projetos"],
+#inicio a[href="#contato"] {
+  min-height: 3.5rem;
+  padding: 0.95rem 1.7rem;
+  font-size: 0.95rem;
+}
+
+nav > div > div.hidden a {
+  padding: 0.7rem 0.85rem;
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
