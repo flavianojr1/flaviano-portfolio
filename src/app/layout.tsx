@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     title: 'Flaviano Astolfo Junior · Analista de Dados',
     description: 'Dados que orientam decisões.',
   },
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
