@@ -18,3 +18,5 @@ yarn-error.log*
 
 # Rules / Non-versioned local files
 TODO.md
+/curriculo/
+/private/

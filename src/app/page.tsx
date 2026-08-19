@@ -239,7 +239,7 @@ export default function Home() {
           <div className="absolute -inset-3 rounded-[2rem] border border-sky-500/20 dark:border-cyan/20" />
           <div className="relative aspect-[3/4] overflow-hidden rounded-[1.75rem] border border-slate-200 bg-slate-100 shadow-2xl shadow-sky-500/10 dark:border-white/10 dark:bg-[#02070d] dark:shadow-cyan/10">
             <img
-              src="/images/profile-dark.jpg"
+              src="/images/profile-light.png"
               alt="Retrato de Flaviano Astolfo Junior"
               className="h-full w-full object-cover object-center"
             />

@@ -73,20 +73,20 @@ body {
 }
 
 /* Portrait treatment */
-div:has(> img[src="/images/profile-dark.jpg"]) {
+div:has(> img[src*="profile-"]) {
   aspect-ratio: 1;
   border-radius: 9999px;
 }
-div:has(> div > img[src="/images/profile-dark.jpg"]) {
+div:has(> div > img[src*="profile-"]) {
   margin-top: -2rem;
 }
-div:has(> div > img[src="/images/profile-dark.jpg"]) > div:first-child {
+div:has(> div > img[src*="profile-"]) > div:first-child {
   border-radius: 9999px;
 }
-img[src="/images/profile-dark.jpg"] {
+img[src*="profile-"] {
   border-radius: 9999px;
   object-position: center 70%;
-  transform: translateY(-18px) scale(1.12);
+  transform: translateY(26px) scale(1.12);
   transform-origin: center center;
 }
 
