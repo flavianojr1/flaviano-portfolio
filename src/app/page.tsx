@@ -43,6 +43,17 @@ function Section({ id, children }: { id: string; children: React.ReactNode }) {
   );
 }
 
+function SectionLabel({ label }: { label: string }) {
+  return (
+    <div className="flex items-center gap-2.5">
+      <span className="h-4 w-1 rounded-full bg-sky-600 shadow-[0_0_8px_rgba(2,132,199,0.5)] dark:bg-cyan dark:shadow-[0_0_8px_rgba(94,231,245,0.6)]" />
+      <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-sky-700 dark:text-cyan">
+        {label}
+      </span>
+    </div>
+  );
+}
+
 export default function Home() {
   const [locale, setLocale] = useState<Locale>('pt');
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -276,7 +287,7 @@ export default function Home() {
       <Section id="sobre">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-14">
           <div>
-            <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.about).label}</p>
+            <SectionLabel label={t(p.about).label} />
             <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
               {t(p.about).title}
             </h2>
@@ -318,7 +329,7 @@ export default function Home() {
 
       {/* Toolkit / Habilidades Section */}
       <Section id="habilidades">
-        <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.skills).label}</p>
+        <SectionLabel label={t(p.skills).label} />
         <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.skills).title}
         </h2>
@@ -358,7 +369,7 @@ export default function Home() {
 
       {/* Projetos Section */}
       <Section id="projetos">
-        <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.projects).label}</p>
+        <SectionLabel label={t(p.projects).label} />
         <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.projects).title}
         </h2>
@@ -421,7 +432,7 @@ export default function Home() {
 
       {/* Experiência Section */}
       <Section id="experiencia">
-        <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.experience).label}</p>
+        <SectionLabel label={t(p.experience).label} />
         <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.experience).title}
         </h2>
@@ -456,7 +467,7 @@ export default function Home() {
 
       {/* Formação & Certificações Section */}
       <Section id="formacao">
-        <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.education).label}</p>
+        <SectionLabel label={t(p.education).label} />
         <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.education).title}
         </h2>
@@ -485,7 +496,7 @@ export default function Home() {
       {/* Contato Section */}
       <Section id="contato">
         <div className="rounded-3xl border border-sky-200 bg-sky-50/60 p-8 shadow-sm dark:border-cyan/20 dark:bg-cyan/[.06] sm:p-14">
-          <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.contact).label}</p>
+          <SectionLabel label={t(p.contact).label} />
           <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
             {t(p.contact).title}
           </h2>

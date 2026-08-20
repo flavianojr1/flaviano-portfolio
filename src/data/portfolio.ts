@@ -31,7 +31,7 @@ export const portfolio = {
   },
   about: {
     pt: {
-      label: '01 / Sobre mim',
+      label: 'Sobre',
       title: 'Conectando dados, processos e decisões.',
       intro:
         'Analista de Dados com formação em Gestão Financeira e Ciência de Dados (EBAC). Minha atuação combina rigor analítico e entendimento de negócio para transformar rotinas operacionais em fluxos automatizados e dados brutos em decisões estratégicas.',
@@ -56,7 +56,7 @@ export const portfolio = {
       ],
     },
     en: {
-      label: '01 / About me',
+      label: 'About',
       title: 'Connecting data, processes, and decisions.',
       intro:
         'Data Analyst with a background in Financial Management and Data Science (EBAC). My work combines analytical rigor and business understanding to turn operational routines into automated workflows and raw data into strategic decisions.',
@@ -83,11 +83,11 @@ export const portfolio = {
   },
   skills: {
     pt: {
-      label: '02 / Competências',
+      label: 'Habilidades',
       title: 'Stack técnica para o ciclo completo de dados.',
     },
     en: {
-      label: '02 / Toolkit',
+      label: 'Skills',
       title: 'Technical stack for the end-to-end data lifecycle.',
     },
   },
@@ -197,12 +197,12 @@ export const portfolio = {
   ],
   projects: {
     pt: {
-      label: '03 / Estudos de caso',
+      label: 'Projetos',
       title: 'Projetos e soluções em destaque.',
       intro: 'Projetos mockados estruturados para demonstrar arquitetura, pipelines de dados e visualização analítica (novos projetos reais serão adicionados em breve).',
     },
     en: {
-      label: '03 / Case studies',
+      label: 'Projects',
       title: 'Featured projects and solutions.',
       intro: 'Mocked projects structured to demonstrate architecture, data pipelines, and analytical visualization (new real projects will be added soon).',
     },
@@ -265,11 +265,11 @@ export const portfolio = {
   ],
   experience: {
     pt: {
-      label: '04 / Experiência',
+      label: 'Experiência',
       title: 'Trajetória profissional orientada a resultados.',
     },
     en: {
-      label: '04 / Experience',
+      label: 'Experience',
       title: 'Professional track record driven by results.',
     },
   },
@@ -338,11 +338,11 @@ export const portfolio = {
   ],
   education: {
     pt: {
-      label: '05 / Formação & Certificações',
+      label: 'Formação',
       title: 'Base acadêmica sólida e aprendizado contínuo.',
     },
     en: {
-      label: '05 / Education & Certifications',
+      label: 'Education',
       title: 'Solid academic foundation and continuous learning.',
     },
   },
@@ -377,13 +377,13 @@ export const portfolio = {
   ],
   contact: {
     pt: {
-      label: '06 / Contato',
+      label: 'Contato',
       title: 'Tem um desafio com dados ou oportunidade interessante?',
       text: 'Estou disponível para novas conexões, projetos e oportunidades na área de dados, analytics e business intelligence. Minha caixa de entrada está sempre aberta.',
       cta: 'Enviar E-mail Direto',
     },
     en: {
-      label: '06 / Contact',
+      label: 'Contact',
       title: 'Have a data challenge or an interesting opportunity?',
       text: "I'm open to new connections, projects, and opportunities in data analytics and business intelligence. Feel free to reach out anytime.",
       cta: 'Send Direct Email',
