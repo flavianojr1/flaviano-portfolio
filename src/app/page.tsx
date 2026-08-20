@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { portfolio as p, Locale } from '@/data/portfolio';
+import { TechIcon } from '@/components/TechIcon';
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -318,21 +319,38 @@ export default function Home() {
       {/* Toolkit / Habilidades Section */}
       <Section id="habilidades">
         <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.skills).label}</p>
-        <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+        <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.skills).title}
         </h2>
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {p.skillsData.map((s) => (
             <motion.div
               whileHover={{ y: -4 }}
               key={s.name}
-              className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-sky-500/40 hover:shadow-md dark:border-white/10 dark:bg-white/[.03] dark:hover:border-cyan/40"
+              className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-sky-500/40 hover:shadow-md dark:border-white/10 dark:bg-white/[.03] dark:hover:border-cyan/40"
             >
-              <div>
-                <span className="text-3xl text-sky-600 dark:text-cyan">{s.icon}</span>
-                <h3 className="mt-6 font-mono text-lg font-bold text-slate-900 dark:text-white">{s.name}</h3>
+              {/* Coluna do Ícone (32% maior à esquerda) */}
+              <div className="flex w-[32%] shrink-0 items-center justify-center self-stretch rounded-2xl bg-slate-50 p-3 shadow-inner dark:bg-white/[.03] dark:border dark:border-white/5">
+                <TechIcon name={s.name} className="h-16 w-16 max-h-16 max-w-16" />
               </div>
-              <p className="mt-3 text-xs leading-5 text-slate-500 dark:text-slate-400">{t(s.type)}</p>
+
+              {/* Coluna dos Tópicos (68% à direita) */}
+              <div className="w-[68%] min-w-0 py-0.5">
+                <h3 className="font-mono text-[15px] font-bold leading-tight tracking-tight text-slate-900 dark:text-white">
+                  {s.name}
+                </h3>
+                <ul className="mt-2.5 space-y-1.5">
+                  {t(s.topics).map((item: string) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-[13px] font-medium leading-snug text-slate-700 dark:text-slate-200"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-600 shadow-[0_0_6px_rgba(2,132,199,0.4)] dark:bg-cyan dark:shadow-[0_0_6px_rgba(94,231,245,0.4)]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -341,7 +359,7 @@ export default function Home() {
       {/* Projetos Section */}
       <Section id="projetos">
         <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.projects).label}</p>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+        <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.projects).title}
         </h2>
         <p className="mt-4 max-w-2xl text-slate-600 dark:text-slate-400">{t(p.projects).intro}</p>
@@ -404,7 +422,7 @@ export default function Home() {
       {/* Experiência Section */}
       <Section id="experiencia">
         <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.experience).label}</p>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+        <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.experience).title}
         </h2>
         <div className="mt-12 border-l-2 border-sky-500/30 pl-6 sm:pl-8 dark:border-cyan/30">
@@ -439,7 +457,7 @@ export default function Home() {
       {/* Formação & Certificações Section */}
       <Section id="formacao">
         <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.education).label}</p>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+        <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.education).title}
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -468,7 +486,7 @@ export default function Home() {
       <Section id="contato">
         <div className="rounded-3xl border border-sky-200 bg-sky-50/60 p-8 shadow-sm dark:border-cyan/20 dark:bg-cyan/[.06] sm:p-14">
           <p className="font-mono text-xs font-bold text-sky-600 dark:text-cyan">{t(p.contact).label}</p>
-          <h2 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+          <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
             {t(p.contact).title}
           </h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-400">{t(p.contact).text}</p>

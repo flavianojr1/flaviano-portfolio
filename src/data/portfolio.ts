@@ -94,51 +94,105 @@ export const portfolio = {
   skillsData: [
     {
       name: 'SQL Server & T-SQL',
-      type: {
-        pt: 'Consultas complexas, Temp Tables, Índices, Otimização de Queries',
-        en: 'Complex queries, Temp Tables, Indexes, Query Optimization',
+      topics: {
+        pt: [
+          'Consultas e JOINs complexos',
+          'Temp Tables, CTEs & Índices',
+          'Otimização de Queries',
+          'Auditoria e validação de bases',
+        ],
+        en: [
+          'Complex queries & JOINs',
+          'Temp Tables, CTEs & Indexes',
+          'Query optimization & tuning',
+          'Auditing & validation',
+        ],
       },
-      icon: '⌁',
     },
     {
       name: 'Power BI & DAX',
-      type: {
-        pt: 'Modelagem Star Schema, Power Query, Indicadores e Dashboards Executivos',
-        en: 'Star Schema, Power Query, Executive KPIs & Dashboards',
+      topics: {
+        pt: [
+          'Modelagem Star Schema',
+          'Fórmulas DAX avançadas',
+          'Tratamento ETL no Power Query',
+          'Dashboards gerenciais e executivos',
+        ],
+        en: [
+          'Star Schema modeling',
+          'Advanced DAX measures',
+          'Power Query ETL pipelines',
+          'Executive dashboards',
+        ],
       },
-      icon: '◈',
     },
     {
       name: 'Python & Automação',
-      type: {
-        pt: 'Pandas, NumPy, pyodbc, ETL, automação de rotinas e integração de APIs',
-        en: 'Pandas, NumPy, pyodbc, ETL, routine automation & API integration',
+      topics: {
+        pt: [
+          'Manipulação com Pandas e NumPy',
+          'Pipelines e cargas com pyodbc',
+          'Automação de rotinas e relatórios',
+          'Integração de APIs e arquivos',
+        ],
+        en: [
+          'Pandas & NumPy data wrangling',
+          'Pipelines & DB loads with pyodbc',
+          'Routine & reporting automation',
+          'API & flat file integrations',
+        ],
       },
-      icon: '⌘',
     },
     {
-      name: 'Qualidade de Dados & Auditoria',
-      type: {
-        pt: 'Data Quality, reconciliação de divergências, validação de regras de negócio',
-        en: 'Data Quality, discrepancy reconciliation, business rule validation',
+      name: 'Qualidade & Auditoria',
+      topics: {
+        pt: [
+          'Reconciliação de bases (+2M)',
+          'Identificação e correção de desvios',
+          'Garantia de integridade operacional',
+          'Validação de regras de negócio',
+        ],
+        en: [
+          'Large datasets reconciliation (2M+)',
+          'Discrepancy detection & fix',
+          'Operational integrity assurance',
+          'Business rules validation',
+        ],
       },
-      icon: '✦',
     },
     {
       name: 'Excel Avançado & VBA',
-      type: {
-        pt: 'Modelagem de dados, fórmulas avançadas e automação de controles',
-        en: 'Data modeling, advanced formulas & control automation',
+      topics: {
+        pt: [
+          'Modelagem financeira e operacional',
+          'Fórmulas complexas e dinâmicas',
+          'Automação de rotinas via VBA',
+          'Relatórios e análises ad-hoc',
+        ],
+        en: [
+          'Financial & operational modeling',
+          'Complex & dynamic formulas',
+          'Routine automation via VBA',
+          'Ad-hoc reports & analysis',
+        ],
       },
-      icon: '▦',
     },
     {
       name: 'Ferramentas Modernas & IA',
-      type: {
-        pt: 'Git, GitHub, Model Context Protocol (MCP), Cursor AI e documentação técnica',
-        en: 'Git, GitHub, Model Context Protocol (MCP), Cursor AI & Tech Docs',
+      topics: {
+        pt: [
+          'Versionamento com Git & GitHub',
+          'Engenharia de prompts com IA',
+          'Model Context Protocol (MCP)',
+          'Programação Agêntica (Antigravity, Claude Code & Codex)',
+        ],
+        en: [
+          'Git & GitHub version control',
+          'Prompt engineering with AI',
+          'Model Context Protocol (MCP)',
+          'Agentic Coding (Antigravity, Claude Code & Codex)',
+        ],
       },
-      icon: '⚙',
     },
   ],
   projects: {
