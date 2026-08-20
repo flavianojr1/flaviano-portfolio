@@ -102,6 +102,16 @@ nav > div > div.hidden a {
   font-size: 0.9rem;
 }
 
+/* Project card image smooth hover transition */
+.project-card-image {
+  transform: scale(1);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform;
+}
+.group:hover .project-card-image {
+  transform: scale(1.06) !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -199,32 +199,33 @@ export const portfolio = {
     pt: {
       label: 'Projetos',
       title: 'Projetos e soluções em destaque.',
-      intro: 'Projetos mockados estruturados para demonstrar arquitetura, pipelines de dados e visualização analítica (novos projetos reais serão adicionados em breve).',
+      intro: 'Soluções desenvolvidas para resolver desafios reais de engenharia, automação, modelagem e visualização estratégica de dados.',
     },
     en: {
       label: 'Projects',
       title: 'Featured projects and solutions.',
-      intro: 'Mocked projects structured to demonstrate architecture, data pipelines, and analytical visualization (new real projects will be added soon).',
+      intro: 'Solutions built to solve real-world challenges in data engineering, automation, modeling, and strategic visualization.',
     },
   },
   projectsData: [
     {
-      title: 'Hub Financeiro',
-      category: 'Portal Analítico · Automação',
+      title: 'Portal Hub Financeiro',
+      category: 'Python · Django · Pipelines ETL · Analytics',
       problem: {
-        pt: 'Dificuldade na consolidação manual de múltiplos extratos e faturas em formatos variados (CSV e PDF).',
-        en: 'Difficulty in manual consolidation of multiple bank statements and invoices in varied formats (CSV & PDF).',
+        pt: 'Consolidação manual de extratos e faturas em múltiplos formatos (CSV e PDF), além da dificuldade em projetar compras parceladas futuras sem duplicações.',
+        en: 'Manual consolidation of statements and invoices across formats (CSV & PDF), alongside the challenge of tracking future installments without duplicates.',
       },
       solution: {
-        pt: 'Portal modular com importação automatizada, deduplicação de transações, regras de categorização e dashboards analíticos de gastos.',
-        en: 'Modular portal with automated ingestion, transaction deduplication, categorization rules, and spending analytics dashboards.',
+        pt: 'Plataforma modular em Python/Django com ingestão automatizada de arquivos, motor de deduplicação ativa, projeção de parcelas e categorização de despesas.',
+        en: 'Modular Python/Django platform with automated file ingestion, active deduplication engine, installment forecasting, and expense auto-categorization.',
       },
-      tech: ['Python', 'SQLite', 'Pandas', 'Dashboards'],
+      tech: ['Python', 'Django', 'SQLite', 'ETL', 'Data Modeling', 'Analytics'],
       result: {
-        pt: 'Processamento automatizado de faturas em segundos',
-        en: 'Automated invoice processing in seconds',
+        pt: 'Automação completa do processamento de faturas e projeção preditiva de gastos',
+        en: 'Full invoice processing automation with predictive expense forecasting',
       },
-      image: '/projects/sales-pulse.svg',
+      image: '/images/projects/hub-financeiro.png',
+      githubUrl: 'https://github.com/flavianojr1/hub-financeiro',
     },
     {
       title: 'Pipeline de Dados & BI',

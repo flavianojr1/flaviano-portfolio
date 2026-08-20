@@ -375,53 +375,60 @@ export default function Home() {
         </h2>
         <p className="mt-4 max-w-2xl text-slate-600 dark:text-slate-400">{t(p.projects).intro}</p>
         <div className="mt-12 space-y-8">
-          {p.projectsData.map((x, i) => (
+          {p.projectsData.map((x) => (
             <motion.article
               whileHover={{ y: -4 }}
               key={x.title}
-              className="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md dark:border-white/10 dark:bg-white/[.03] md:grid-cols-2"
+              className="group grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all hover:shadow-md dark:border-white/10 dark:bg-white/[.03] md:grid-cols-2"
             >
-              <div className="flex min-h-64 items-center justify-center bg-slate-100 p-8 dark:bg-[#0b1c30]">
-                <img src={x.image} alt={`Mockup do projeto ${x.title}`} className="max-h-56 w-full object-contain" />
+              {/* Imagem preenchendo 100% com transition suave ao passar o mouse no card */}
+              <div className="relative min-h-[240px] w-full overflow-hidden bg-slate-100 sm:min-h-[300px] md:min-h-full dark:bg-[#07111f]">
+                <img
+                  src={x.image}
+                  alt={`Prévia do projeto ${x.title}`}
+                  className="project-card-image h-full w-full object-cover object-left-top"
+                />
               </div>
-              <div className="flex flex-col justify-center p-7 sm:p-10">
+
+              {/* Conteúdo textual calibrado e compacto */}
+              <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-9">
                 <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-sky-600 dark:text-cyan">
-                  0{i + 1} · {x.category}
+                  {x.category}
                 </p>
-                <h3 className="mt-3 text-2xl font-bold text-slate-900 dark:text-white sm:text-3xl">{x.title}</h3>
-                <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                <h3 className="mt-2 text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">{x.title}</h3>
+                <p className="mt-3 text-xs leading-5 text-slate-600 dark:text-slate-400">
                   <b className="font-semibold text-slate-900 dark:text-slate-200">
                     {locale === 'pt' ? 'Contexto' : 'Context'} ·{' '}
                   </b>
                   {t(x.problem)}
                 </p>
-                <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                <p className="mt-2 text-xs leading-5 text-slate-600 dark:text-slate-400">
                   <b className="font-semibold text-slate-900 dark:text-slate-200">
                     {locale === 'pt' ? 'Solução' : 'Solution'} ·{' '}
                   </b>
                   {t(x.solution)}
                 </p>
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap gap-1.5">
                   {x.tech.map((z) => (
                     <span
                       key={z}
-                      className="rounded-full border border-sky-200/60 bg-sky-50 px-3 py-1 font-mono text-[10px] font-semibold text-sky-700 dark:border-transparent dark:bg-cyan/10 dark:text-cyan"
+                      className="rounded-full border border-sky-200/60 bg-sky-50 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-sky-700 dark:border-transparent dark:bg-cyan/10 dark:text-cyan"
                     >
                       {z}
                     </span>
                   ))}
                 </div>
-                <div className="mt-6 flex items-center justify-between border-t border-slate-200 pt-4 dark:border-white/10">
-                  <span className="text-xs font-bold text-sky-700 dark:text-cyan sm:text-sm">{t(x.result)}</span>
+                <div className="mt-5 flex items-center justify-between border-t border-slate-200 pt-3.5 dark:border-white/10">
+                  <span className="text-xs font-bold text-sky-700 dark:text-cyan">{t(x.result)}</span>
                   <a
-                    href={p.links.github}
+                    href={(x as any).githubUrl || p.links.github}
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Ver repositório do projeto ${x.title}`}
-                    className="flex items-center gap-1 text-xs font-semibold text-slate-400 transition hover:text-sky-600 dark:hover:text-cyan"
+                    className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-100"
                   >
+                    <Github size={15} className="text-white dark:text-slate-950" />
                     <span>GitHub</span>
-                    <ExternalLink size={14} />
                   </a>
                 </div>
               </div>
