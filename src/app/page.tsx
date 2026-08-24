@@ -23,9 +23,28 @@ import { motion, AnimatePresence } from 'motion/react';
 import { portfolio as p, Locale } from '@/data/portfolio';
 import { TechIcon } from '@/components/TechIcon';
 
+const sectionContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
 const fade = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55 } },
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.7,
+      delay: 0.15,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
 };
 
 function Section({ id, children }: { id: string; children: React.ReactNode }) {
@@ -35,7 +54,7 @@ function Section({ id, children }: { id: string; children: React.ReactNode }) {
       variants={fade}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: '-80px' }}
+      viewport={{ once: true, amount: 0.2 }}
       className="mx-auto max-w-6xl px-6 py-24 sm:px-8"
     >
       {children}
