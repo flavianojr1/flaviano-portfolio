@@ -548,6 +548,15 @@ export default function Home() {
               {t(p.contact).cta}
             </a>
             <a
+              href={p.links.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-700 transition hover:border-sky-600 hover:text-sky-600 dark:border-white/20 dark:bg-transparent dark:text-white dark:hover:border-cyan dark:hover:text-cyan"
+            >
+              <Linkedin size={16} />
+              {(t(p.contact) as any).ctaLinkedIn || 'Chamar no LinkedIn'}
+            </a>
+            <a
               href={p.links.github}
               target="_blank"
               rel="noreferrer"

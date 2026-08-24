@@ -382,12 +382,14 @@ export const portfolio = {
       title: 'Tem um desafio com dados ou oportunidade interessante?',
       text: 'Estou disponível para novas conexões, projetos e oportunidades na área de dados, analytics e business intelligence. Minha caixa de entrada está sempre aberta.',
       cta: 'Enviar E-mail Direto',
+      ctaLinkedIn: 'Chamar no LinkedIn',
     },
     en: {
       label: 'Contact',
       title: 'Have a data challenge or an interesting opportunity?',
       text: "I'm open to new connections, projects, and opportunities in data analytics and business intelligence. Feel free to reach out anytime.",
       cta: 'Send Direct Email',
+      ctaLinkedIn: 'Connect on LinkedIn',
     },
   },
   links: {
