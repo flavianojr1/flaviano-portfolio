@@ -1,4 +1,4 @@
-﻿# 🌐 Flaviano Astolfo Junior — Portfolio
+# 🌐 Flaviano Astolfo Junior — Portfolio
 
 Portfólio pessoal e profissional desenvolvido com **Next.js 15**, **React 19**, **TypeScript** e **Tailwind CSS**, apresentando projetos, competências e trajetória técnica em **Data Analytics**, **Business Intelligence** e **Automação**.
 
@@ -71,7 +71,7 @@ npm run dev
 
 ## 📬 Contato
 
-- **LinkedIn:** [linkedin.com/in/flaviano-astolfo-junior](https://www.linkedin.com/)
+- **LinkedIn:** [linkedin.com/in/flaviano-junior](https://www.linkedin.com/in/flaviano-junior)
 - **Email:** [flavianoastolfojunior@gmail.com](mailto:flavianoastolfojunior@gmail.com)
 - **GitHub:** [@flavianojr1](https://github.com/flavianojr1)
 

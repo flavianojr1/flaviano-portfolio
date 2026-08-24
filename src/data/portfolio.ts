@@ -392,7 +392,7 @@ export const portfolio = {
   },
   links: {
     github: 'https://github.com/flavianojr1',
-    linkedin: 'https://www.linkedin.com/',
+    linkedin: 'https://www.linkedin.com/in/flaviano-junior',
     email: 'mailto:flavianoastolfojunior@gmail.com',
     emailText: 'flavianoastolfojunior@gmail.com',
   },

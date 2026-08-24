@@ -544,7 +544,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-slate-200 bg-white/50 dark:border-white/10 dark:bg-transparent">
         <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-8 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <span>© 2025 {p.name}</span>
+          <span>© {new Date().getFullYear()} {p.name}</span>
           <div className="flex gap-5">
             <a href={p.links.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition hover:text-sky-600 dark:hover:text-cyan">
               <Github size={16} />
