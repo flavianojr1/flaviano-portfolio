@@ -14,6 +14,7 @@ import {
   Mail,
   MapPin,
   Menu,
+  MessageCircle,
   Moon,
   Sparkles,
   Sun,
@@ -21,7 +22,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { portfolio as p, Locale } from '@/data/portfolio';
-import { TechIcon } from '@/components/TechIcon';
+import { TechIcon, WhatsAppIcon } from '@/components/TechIcon';
 
 const sectionContainer = {
   hidden: { opacity: 0 },
@@ -616,6 +617,15 @@ export default function Home() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
+              href={p.links.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow-md shadow-emerald-600/20 transition hover:bg-emerald-700 dark:bg-emerald-500 dark:text-slate-950 dark:hover:bg-emerald-400 dark:shadow-none"
+            >
+              <WhatsAppIcon className="h-4 w-4 fill-white dark:fill-slate-950" />
+              WhatsApp
+            </a>
+            <a
               href={p.links.email}
               className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-6 py-3.5 text-sm font-bold text-white shadow-md shadow-sky-600/20 transition hover:bg-sky-700 dark:bg-cyan dark:text-ink dark:hover:bg-white dark:shadow-none"
             >
@@ -649,6 +659,9 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-8 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <span>© {new Date().getFullYear()} {p.name}</span>
           <div className="flex gap-5">
+            <a href={p.links.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="transition hover:text-emerald-600 dark:hover:text-emerald-400">
+              <WhatsAppIcon className="h-4 w-4 fill-current" />
+            </a>
             <a href={p.links.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition hover:text-sky-600 dark:hover:text-cyan">
               <Github size={16} />
             </a>

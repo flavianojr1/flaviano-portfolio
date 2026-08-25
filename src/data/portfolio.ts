@@ -649,5 +649,7 @@ export const portfolio = {
     linkedin: 'https://www.linkedin.com/in/flaviano-junior',
     email: 'mailto:flavianoastolfojunior@gmail.com',
     emailText: 'flavianoastolfojunior@gmail.com',
+    whatsapp: 'https://wa.me/5519971394877',
+    whatsappText: '(19) 97139-4877',
   },
 } as const;
