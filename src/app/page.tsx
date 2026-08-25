@@ -566,6 +566,32 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        {/* Nuvem de Competências & Palavras-Chave */}
+        <div className="mt-12 border-t border-slate-200/80 pt-8 dark:border-white/10">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-sky-700 dark:text-cyan">
+              {t(p.skillsCloud).label}
+            </h3>
+            <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
+              {p.skillTags.length} {locale === 'pt' ? 'competências' : 'skills'}
+            </span>
+          </div>
+          <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+            {t(p.skillsCloud).title}
+          </p>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            {p.skillTags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center rounded-lg border border-slate-200 bg-white px-3 py-1.5 font-mono text-xs font-medium text-slate-700 shadow-sm transition hover:border-sky-500/40 hover:text-sky-600 hover:shadow-sm dark:border-white/10 dark:bg-white/[.03] dark:text-slate-300 dark:hover:border-cyan/40 dark:hover:text-cyan"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
       </Section>
 
       {/* Contato Section */}
