@@ -36,13 +36,12 @@ const sectionContainer = {
 };
 
 const fade = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.7,
-      delay: 0.15,
+      duration: 0.6,
       ease: [0.16, 1, 0.3, 1],
     },
   },
@@ -55,8 +54,8 @@ function Section({ id, children }: { id: string; children: React.ReactNode }) {
       variants={fade}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
-      className="mx-auto max-w-6xl px-6 py-24 sm:px-8"
+      viewport={{ once: true, amount: 0, margin: "0px 0px 80px 0px" }}
+      className="mx-auto max-w-6xl px-6 py-8 sm:px-8 sm:py-14 md:py-24"
     >
       {children}
     </motion.section>
@@ -222,7 +221,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="inicio"
-        className="relative mx-auto grid min-h-screen max-w-6xl items-center gap-14 px-6 pb-20 pt-32 sm:px-8 lg:grid-cols-[1.15fr_.85fr] lg:gap-16"
+        className="relative mx-auto grid min-h-screen max-w-6xl items-center gap-10 px-6 pb-12 pt-24 sm:gap-14 sm:px-8 sm:pb-20 sm:pt-32 lg:grid-cols-[1.15fr_.85fr] lg:gap-16"
       >
         <div className="absolute right-10 top-40 h-64 w-64 rounded-full bg-sky-400/10 blur-[100px] dark:bg-cyan/10" />
         <motion.div
@@ -353,7 +352,7 @@ export default function Home() {
         <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.skills).title}
         </h2>
-        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-3.5 sm:mt-10 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
           {p.skillsData.map((s) => (
             <motion.div
               whileHover={{ y: -4 }}
@@ -393,8 +392,8 @@ export default function Home() {
         <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl lg:text-4xl">
           {t(p.projects).title}
         </h2>
-        <p className="mt-4 max-w-2xl text-slate-600 dark:text-slate-400">{t(p.projects).intro}</p>
-        <div className="mt-12 space-y-8">
+        <p className="mt-3 max-w-2xl text-slate-600 dark:text-slate-400 sm:mt-4">{t(p.projects).intro}</p>
+        <div className="mt-6 space-y-4 sm:mt-12 sm:space-y-8">
           {p.projectsData.map((x) => (
             <motion.article
               whileHover={{ y: -4 }}
