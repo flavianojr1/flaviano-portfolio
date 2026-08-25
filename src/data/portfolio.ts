@@ -435,6 +435,54 @@ export const portfolio = {
       status: { pt: 'Concluído', en: 'Completed' },
     },
   ],
+  certifications: {
+    pt: {
+      label: 'Certificações & Especializações',
+      title: 'Cursos complementares e credenciais técnicas.',
+    },
+    en: {
+      label: 'Certifications & Specializations',
+      title: 'Complementary courses and technical credentials.',
+    },
+  },
+  certificationsData: [
+    {
+      name: 'AWS Fundamentals',
+      issuer: 'Amazon Web Services (AWS)',
+      year: '2026',
+      status: { pt: 'Em andamento', en: 'In progress' },
+    },
+    {
+      name: 'Databricks Fundamentals Accreditation',
+      issuer: 'Databricks',
+      year: '2025',
+      status: { pt: 'Certificado', en: 'Certified' },
+    },
+    {
+      name: 'Intro to Model Context Protocol (MCP) & Vibe Coding',
+      issuer: 'Scrimba (Claude Code, Cursor & Copilot)',
+      year: '2026',
+      status: { pt: 'Concluído', en: 'Completed' },
+    },
+    {
+      name: 'EBAC Top Voices · Reconhecimento & Engajamento',
+      issuer: 'EBAC',
+      year: '2025',
+      status: { pt: 'Destaque', en: 'Recognition' },
+    },
+    {
+      name: 'Python para Data Science & Power BI Desktop',
+      issuer: 'Alura',
+      year: '2025',
+      status: { pt: 'Concluído', en: 'Completed' },
+    },
+    {
+      name: 'Especialista em Excel & Gestão Ágil de Projetos',
+      issuer: 'Microsoft / LinkedIn Learning / Santander',
+      year: '2025',
+      status: { pt: 'Concluído', en: 'Completed' },
+    },
+  ],
   contact: {
     pt: {
       label: 'Contato',
