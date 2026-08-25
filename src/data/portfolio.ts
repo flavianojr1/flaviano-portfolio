@@ -247,22 +247,23 @@ export const portfolio = {
       githubUrl: 'https://github.com/flavianojr1/hub-financeiro',
     },
     {
-      title: 'Pipeline de Dados & BI',
-      category: 'SQL Server · Business Intelligence',
+      title: 'Análise de Custos de Veículos · Oficina',
+      category: 'Python · Pandas · Power BI · Analytics',
       problem: {
-        pt: 'Processamentos críticos de fechamento operacional demoravam dias e divergências dependiam de conferências manuais.',
-        en: 'Critical operational closing processing took days and discrepancies relied on manual spreadsheet checks.',
+        pt: 'Dificuldade no acompanhamento de ordens de serviço automotivas, dispersão de custos operacionais e falta de indicadores para tomada de decisão em manutenção.',
+        en: 'Friction tracking automotive work orders, dispersed operational repair costs, and lack of visual KPIs for fleet maintenance decisions.',
       },
       solution: {
-        pt: 'Otimização com tabelas temporárias, índices e criação de dashboard executivo com indicadores gerenciais e comparativos.',
-        en: 'Query optimization with temp tables, indexes, and an executive dashboard with management KPIs and comparisons.',
+        pt: 'Pipeline completo de tratamento e enriquecimento de dados em Python (Pandas), estruturação de métricas financeiras e dashboard interativo em Power BI com visão detalhada por veículo e categoria.',
+        en: 'Data pipeline and cleaning with Python (Pandas), financial metric modeling, and interactive Power BI executive dashboard breakdown by vehicle and cost type.',
       },
-      tech: ['SQL Server', 'T-SQL', 'Power BI', 'DAX'],
+      tech: ['Python', 'Pandas', 'Power BI', 'ETL', 'Analytics'],
       result: {
-        pt: 'Processamentos reduzidos de dias para horas (+2M linhas)',
-        en: 'Processing reduced from days to hours (2M+ records)',
+        pt: 'Visibilidade total sobre custos de manutenção e padrões operacionais por frota',
+        en: 'End-to-end visibility into fleet maintenance costs and operational patterns',
       },
-      image: '/projects/ops-flow.svg',
+      image: '/images/projects/analise-custos-veiculos.png',
+      githubUrl: 'https://github.com/flavianojr1/analise-custos-veiculos-oficina',
     },
     {
       title: 'Detecção de Fraudes em Cartão',
@@ -280,7 +281,46 @@ export const portfolio = {
         pt: 'Minimização drástica de falsos negativos operacionais',
         en: 'Drastic minimization of operational false negatives',
       },
-      image: '/projects/retention-lens.svg',
+      image: '/images/projects/fraudes-cartao.jpg',
+      githubUrl: 'https://github.com/flavianojr1/projeto-final-ebac-fraudes-em-transacoes-de-credito',
+    },
+    {
+      title: 'Inadimplência por UF · Dados Bacen',
+      category: 'Time Series · Python · Analytics Financeiro',
+      problem: {
+        pt: 'Necessidade de analisar a evolução histórica das taxas de inadimplência regional no Brasil e identificar correlações econômicas por Estado.',
+        en: 'Need to analyze the historical evolution of regional default rates across Brazilian states and discover economic correlations.',
+      },
+      solution: {
+        pt: 'Pipeline de extração automatizada de séries temporais via API do Sistema Gerenciador de Séries Temporais do Banco Central (SGS), tratamento de dados e visualização macroeconômica (2004 a 2024).',
+        en: 'Automated time-series extraction pipeline via Central Bank API (SGS), data harmonization, and macroeconomic regional visualization spanning 2004-2024.',
+      },
+      tech: ['Python', 'Pandas', 'APIs Bacen / SGS', 'Matplotlib', 'Time Series'],
+      result: {
+        pt: 'Mapeamento de 20 anos de séries temporais financeiras e clusters regionais',
+        en: '20-year financial time-series mapping and regional default clustering',
+      },
+      image: '/images/projects/inadimplencia-bacen.jpg',
+      githubUrl: 'https://github.com/flavianojr1/semantix-inadimplencia-por-uf',
+    },
+    {
+      title: 'Segmentação de Clientes · K-Means',
+      category: 'Machine Learning · Clusterização & CRM',
+      problem: {
+        pt: 'Dificuldade em segmentar bases de consumidores sem rótulos prévios para direcionamento de campanhas e estratégias personalizadas de retenção.',
+        en: 'Difficulty grouping unlabeled customer bases to target customized marketing campaigns and retention strategies.',
+      },
+      solution: {
+        pt: 'Modelagem não supervisionada com K-Means Clustering, validação de clusters via Elbow Method (Método do Cotovelo) e Silhouette Score, combinando análise exploratória e perfilamento de personas.',
+        en: 'Unsupervised modeling with K-Means Clustering, cluster validation via Elbow Method and Silhouette Score, combining EDA and customer persona profiling.',
+      },
+      tech: ['Python', 'Scikit-Learn', 'K-Means', 'Pandas', 'Seaborn', 'Clustering'],
+      result: {
+        pt: 'Identificação de clusters estratégicos de clientes por renda e gastos',
+        en: 'Strategic customer cluster identification based on income and spend behavior',
+      },
+      image: '/images/projects/segmentacao-kmeans.jpg',
+      githubUrl: 'https://github.com/flavianojr1/segmentacao-clientes-kmeans',
     },
   ],
   experience: {
