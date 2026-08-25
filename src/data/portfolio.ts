@@ -379,6 +379,27 @@ export const portfolio = {
       },
     },
     {
+      period: 'Fev/2018 — Fev/2021',
+      company: 'Nutricenter – Suplementos Esportivos',
+      location: 'São José do Rio Pardo, SP',
+      role: {
+        pt: 'Coordenador de E-commerce & Operações',
+        en: 'E-commerce & Operations Coordinator',
+      },
+      highlights: {
+        pt: [
+          'Gestão de operações de e-commerce e canais digitais, controle de estoque, análise de custos e modelagem de precificação em Excel.',
+          'Desenvolvimento e manutenção da plataforma de comércio eletrônico e gestão de catálogo/anúncios em múltiplos marketplaces.',
+          'Coordenação de faturamento, emissão fiscal, expedição logística e acompanhamento de indicadores de vendas multicanal.',
+        ],
+        en: [
+          'Management of e-commerce operations, inventory control, cost analysis, and product pricing models in Excel.',
+          'Development and maintenance of the online store platform and catalog optimization across multiple marketplace channels.',
+          'Coordination of invoicing, fiscal compliance, logistics fulfillment, and multi-channel sales KPI tracking.',
+        ],
+      },
+    },
+    {
       period: 'Jan/2015 — Nov/2015',
       company: 'Mediappeal (Marketing Digital)',
       location: 'São José do Rio Pardo, SP',
