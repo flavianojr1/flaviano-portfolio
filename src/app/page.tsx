@@ -655,9 +655,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-slate-200 bg-white/50 dark:border-white/10 dark:bg-transparent">
-        <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-8 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-5 px-6 py-8 text-center text-xs text-slate-500 sm:flex-row sm:justify-between sm:text-left sm:px-8">
           <span>© {new Date().getFullYear()} {p.name}</span>
-          <div className="flex gap-5">
+          <div className="flex items-center justify-center gap-5">
             <a href={p.links.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="transition hover:text-emerald-600 dark:hover:text-emerald-400">
               <WhatsAppIcon className="h-4 w-4 fill-current" />
             </a>
