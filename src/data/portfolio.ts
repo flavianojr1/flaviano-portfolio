@@ -209,6 +209,25 @@ export const portfolio = {
   },
   projectsData: [
     {
+      title: 'JobTrackr · Portal de Vagas & Analytics',
+      category: 'Python · Django · HTMX · Web Scraping & Playwright',
+      problem: {
+        pt: 'Dificuldade no gerenciamento de múltiplas candidaturas a vagas, preenchimento manual repetitivo e falta de visibilidade sobre o andamento e conversão dos processos seletivos.',
+        en: 'Friction managing multiple job applications, repetitive manual data entry, and lack of visibility into recruitment pipeline progression and conversion metrics.',
+      },
+      solution: {
+        pt: 'Aplicação web com motor inteligente de autofill (LinkedIn & Gupy) via Beautiful Soup e Playwright, prevenção de duplicadas, Kanban por status e dashboard com KPIs em tempo real.',
+        en: 'Web application featuring intelligent autofill (LinkedIn & Gupy) with Beautiful Soup and Playwright, duplicate prevention engine, status Kanban, and real-time KPI dashboard.',
+      },
+      tech: ['Python', 'Django', 'HTMX', 'Tailwind CSS', 'Playwright', 'PostgreSQL', 'Supabase'],
+      result: {
+        pt: 'Automação de cadastro de vagas, rastreabilidade e visão executiva de recolocação',
+        en: 'Automated application entry, pipeline traceability, and executive job search insights',
+      },
+      image: '/images/projects/jobtrackr.png',
+      liveUrl: 'https://jobtrackr-pmsr.onrender.com/',
+    },
+    {
       title: 'Portal Hub Financeiro',
       category: 'Python · Django · Pipelines ETL · Analytics',
       problem: {

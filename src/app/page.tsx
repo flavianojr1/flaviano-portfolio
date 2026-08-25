@@ -439,16 +439,29 @@ export default function Home() {
                 </div>
                 <div className="mt-5 flex items-center justify-between border-t border-slate-200 pt-3.5 dark:border-white/10">
                   <span className="text-xs font-bold text-sky-700 dark:text-cyan">{t(x.result)}</span>
-                  <a
-                    href={(x as any).githubUrl || p.links.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Ver repositório do projeto ${x.title}`}
-                    className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-100"
-                  >
-                    <Github size={15} className="text-white dark:text-slate-950" />
-                    <span>GitHub</span>
-                  </a>
+                  {(x as any).liveUrl ? (
+                    <a
+                      href={(x as any).liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Acessar projeto ${x.title}`}
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-sky-600 px-3.5 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-sky-700 dark:bg-cyan dark:text-ink dark:hover:bg-white"
+                    >
+                      <span>{locale === 'pt' ? 'Acessar' : 'Live Demo'}</span>
+                      <ArrowUpRight size={15} />
+                    </a>
+                  ) : (
+                    <a
+                      href={(x as any).githubUrl || p.links.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Ver repositório do projeto ${x.title}`}
+                      className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-100"
+                    >
+                      <Github size={15} className="text-white dark:text-slate-950" />
+                      <span>GitHub</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.article>
