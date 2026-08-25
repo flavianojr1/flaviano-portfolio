@@ -163,6 +163,14 @@ export default function Home() {
 
           {/* Mobile Actions */}
           <div className="flex items-center gap-2 md:hidden">
+            {/* Mobile Language Switcher direto no header */}
+            <button
+              onClick={() => changeLocale(locale === 'pt' ? 'en' : 'pt')}
+              className="flex h-8 items-center justify-center rounded-full border border-slate-200 px-2.5 font-mono text-[11px] font-bold text-sky-600 transition hover:bg-sky-50 dark:border-white/15 dark:text-cyan dark:hover:bg-cyan/10"
+              aria-label="Alternar idioma"
+            >
+              {locale === 'pt' ? 'EN' : 'PT'}
+            </button>
             <button
               onClick={toggleTheme}
               className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition dark:border-white/15 dark:text-cyan"
