@@ -532,32 +532,34 @@ export default function Home() {
         </div>
 
         {/* Certificações & Cursos Complementares */}
-        <div className="mt-14 border-t border-slate-200/80 pt-10 dark:border-white/10">
-          <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-sky-700 dark:text-cyan">
-            {t(p.certifications).label}
-          </h3>
-          <p className="mt-1 text-sm font-semibold text-slate-900 dark:text-white">
-            {t(p.certifications).title}
-          </p>
+        <div className="mt-12 border-t border-slate-200/80 pt-8 dark:border-white/10">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-sky-700 dark:text-cyan">
+              {t(p.certifications).label}
+            </h3>
+            <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
+              {p.certificationsData.length} {locale === 'pt' ? 'credenciais' : 'credentials'}
+            </span>
+          </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {p.certificationsData.map((c) => (
               <div
                 key={c.name}
-                className="flex flex-col justify-between rounded-xl border border-slate-200/70 bg-slate-50/70 p-4 transition hover:border-sky-400/40 hover:bg-white dark:border-white/5 dark:bg-white/[.02] dark:hover:border-cyan/30 dark:hover:bg-white/[.04]"
+                className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-3.5 shadow-sm transition hover:border-sky-400/50 hover:shadow-md dark:border-white/10 dark:bg-white/[.03] dark:hover:border-cyan/40"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2">
-                    <span className="font-mono text-[11px] font-bold text-sky-600 dark:text-cyan">{c.year}</span>
-                    <span className="rounded-full bg-sky-100 px-2 py-0.5 text-[10px] font-semibold text-sky-800 dark:bg-cyan/10 dark:text-cyan">
+                    <span className="font-mono text-[10px] font-bold text-sky-600 dark:text-cyan">{c.year}</span>
+                    <span className="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[9px] font-semibold text-slate-600 dark:bg-white/10 dark:text-slate-300">
                       {t(c.status)}
                     </span>
                   </div>
-                  <h4 className="mt-2.5 text-xs font-bold leading-snug text-slate-900 dark:text-white">
+                  <h4 className="mt-2 text-xs font-bold leading-tight text-slate-900 line-clamp-2 dark:text-white">
                     {c.name}
                   </h4>
                 </div>
-                <p className="mt-3 text-[11px] font-medium text-slate-500 dark:text-slate-400">
+                <p className="mt-2 text-[11px] font-medium text-slate-500 truncate dark:text-slate-400">
                   {c.issuer}
                 </p>
               </div>
